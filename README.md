@@ -1,6 +1,6 @@
 # nvidia_driver_and_cuda-installation
 # Install Nvidia driver
-got to thr elow link and in case error occurs do not use auto mode to install nvidia driver, use the reccomended version
+got to the below link and in case error occurs do not use auto mode to install nvidia driver, use the reccomended version
 https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu
 
 # Install CUDA:
@@ -67,21 +67,20 @@ sudo lshw -C display
 # Cuda installation with any specific version 
 - Before installtion of Cuda check your GPU compute compitibility in below link 
 - [**Check for GPU compatibility with Cuda**](https://developer.nvidia.com/cuda-gpus)
-- **outpu**
-![alt text1](https://github.com/faridelya/Deplyoment/blob/42ce6929afadaabd87dff99c82a1c476d7f04bfa/Screenshot%20from%202022-12-22%2011-22-20.png)
-![alt text2](https://github.com/faridelya/Deplyoment/blob/42ce6929afadaabd87dff99c82a1c476d7f04bfa/Screenshot%20from%202022-12-22%2011-22-41.png)
-- The above picture show that My GPU has 3.0 compute compatability but we will deep dive and will see in below link.
+- **output**
+![gpu_compat](https://user-images.githubusercontent.com/101540227/217725506-bb662988-e9ab-4a17-bdec-8923b75b57b5.png)
+
+- The above picture show that My GPU has 8.6 compute compatability but we will deep dive and will see in below link.
 
 - You can also make sure your GPU Architecture and GPU model and GPU name in below link
 - [check for GPU ](https://en.wikipedia.org/wiki/CUDA)
 - I found my GPU like this.
-![alt textt](https://github.com/faridelya/Deplyoment/blob/6daa7b9b81bdb87bb6d5c65ed316f4ee92551027/Screenshot%20from%202022-12-22%2011-11-05.png)
-![alt text](https://github.com/faridelya/Deplyoment/blob/6daa7b9b81bdb87bb6d5c65ed316f4ee92551027/Screenshot%20from%202022-12-22%2011-10-51.png)
+![gpu_det](https://user-images.githubusercontent.com/101540227/217724964-7b261f8f-8b4b-4c08-82c8-29d68ae9513e.png)
 
-- So above i find out that my GPU has **3.5** compute compatibility and **kelper** is architecture and GPU model is **GK208M** 
+- So above i find out that my GPU has **8.6** compute compatibility and **Amoere** is architecture and GPU model is **GA106** 
 - Now i will check CUDA version computability with GPU you ccan check in above link  
 - **Output**
-![alt text4](https://github.com/faridelya/Deplyoment/blob/54cb724fa67a19268262413b3c64e207436a6841/Screenshot%20from%202022-12-22%2011-26-47.png)
+
 - Now we can install different compatible version of cuda  on MY GPU so will Cuda installation in below link
 - **Before Further do we will also check Nvidia Display driver comaptibility with cuda version**
 - [vistit her](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html) and check tabel 2 and tabel 3 after that if you fullfill the requirement then you may proceed.
@@ -96,3 +95,5 @@ sudo lshw -C display
  export LD_LIBRARY_PATH=/usr/local/cuda-12.0/lib64\
                          ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
  ```
+# Install CUDnn
+- Follow the instruction :[you can check here ](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html)
